@@ -100,6 +100,21 @@ const routes = [
       {
         component: () => <Redirect to="/errors/error-404" />
       }
+      path: '/file',
+        exact: true,
+        component: lazy(() => import('views/FileManagentList'))
+      },
+      {
+        path: '/upload',
+        exact: true,
+        component: lazy(() => import('views/FileManagentDetails'))
+      },
+      {
+        path: '/download',
+        exact: true,
+        component: lazy(() => import('views/FileManagentDetails'))
+      },
+
     ]
   }
 ];
